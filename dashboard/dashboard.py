@@ -12,16 +12,16 @@ tabs = st.sidebar.radio("Pilih Analisis:",
                          "Analisis Customer", "Analisis Order"])
 
 def load_data():
-    customers_df = pd.read_csv("data//customers_dataset.csv")
-    geolocation_df = pd.read_csv("data//geolocation_dataset.csv")
-    orders_df = pd.read_csv("data//orders_dataset.csv")
-    order_items_df = pd.read_csv("data//order_items_dataset.csv")
-    order_payments_df = pd.read_csv("data//order_payments_dataset.csv")
-    order_reviews_df = pd.read_csv("data//order_reviews_dataset.csv")
-    product_category_name_tr_df = pd.read_csv("data//product_category_name_translation.csv")
-    products_df = pd.read_csv("data//products_dataset.csv")
-    sellers_df = pd.read_csv("data//sellers_dataset.csv")
-    orders_all = pd.read_csv("orders_all.csv")
+    customers_df = pd.read_csv("..//data//customers_dataset.csv")
+    geolocation_df = pd.read_csv("..//data//geolocation_dataset.csv")
+    orders_df = pd.read_csv("..//data//orders_dataset.csv")
+    order_items_df = pd.read_csv("..//data//order_items_dataset.csv")
+    order_payments_df = pd.read_csv("..//data//order_payments_dataset.csv")
+    order_reviews_df = pd.read_csv("..//data//order_reviews_dataset.csv")
+    product_category_name_tr_df = pd.read_csv("..//data//product_category_name_translation.csv")
+    products_df = pd.read_csv("..//data//products_dataset.csv")
+    sellers_df = pd.read_csv("..//data//sellers_dataset.csv")
+    orders_all = pd.read_csv("..//data//orders_all.csv")
     return customers_df, geolocation_df, orders_df, order_items_df, order_payments_df, order_reviews_df, product_category_name_tr_df, products_df, sellers_df, orders_all
 
 customers_df, geolocation_df, orders_df, order_items_df, order_payments_df, order_reviews_df, product_category_name_tr_df, products_df, sellers_df, orders_all = load_data()
@@ -42,7 +42,7 @@ def display_metrics(data, label_column, value_column, index):
 if tabs == "Analisis Kategori Produk":
     st.header("Kategori Produk dengan Pembelian Terbanyak")
     
-    product_purchase_counts = pd.read_csv("product_purchase_counts.csv")
+    product_purchase_counts = pd.read_csv("..//data//product_purchase_counts.csv")
     product_purchase_counts.sort_values(by='count', ascending=False, inplace=True)
     product_purchase_counts = product_purchase_counts.head(10)
     
@@ -54,7 +54,7 @@ if tabs == "Analisis Kategori Produk":
 elif tabs == "Analisis Pengiriman":
     st.header("Pengaruh Kecepatan Pengiriman terhadap Skor Ulasan")
     
-    average_review_scores = pd.read_csv("average_review_scores.csv")
+    average_review_scores = pd.read_csv("..//data//average_review_scores.csv")
     
     plot_bar_chart(average_review_scores, "Ontime", "review_score", 
                    "Pengaruh Kecepatan Pengiriman terhadap Skor Ulasan", "Kecepatan Pengiriman", "Skor Ulasan")

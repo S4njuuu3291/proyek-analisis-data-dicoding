@@ -1,6 +1,6 @@
 # proyek-analisis-data-dicoding
 
-Dashboard sebenarnya sudah di deploy jadi bisa menggunakan url yang tersedia di url.txt
+Menjalankan dashboard bisa dengan langsung melalui link di url.txt
 
 Tetapi bisa juga dengan:
 <br>
@@ -8,7 +8,7 @@ Tetapi bisa juga dengan:
 ## Setup Environment - Anaconda
 
 ```
-conda create --name main-ds python=3.9
+conda create --name main-ds python=3.12
 conda activate main-ds
 pip install -r requirements.txt
 ```
@@ -26,5 +26,6 @@ pip install -r requirements.txt
 ## Run steamlit app
 
 ```
+cd dashboard
 streamlit run dashboard.py
 ```
