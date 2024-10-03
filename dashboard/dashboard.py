@@ -44,7 +44,7 @@ def display_metrics(data, label_column, value_column, index):
 if tabs == "Analisis Kategori Produk":
     st.header("Kategori Produk dengan Pembelian Terbanyak")
     
-    product_purchase_counts = pd.read_csv("data\product_purchase_counts.csv")
+    product_purchase_counts = pd.read_csv("data/product_purchase_counts.csv")
     product_purchase_counts.sort_values(by='count', ascending=False, inplace=True)
     product_purchase_counts = product_purchase_counts.head(10)
     
@@ -56,7 +56,7 @@ if tabs == "Analisis Kategori Produk":
 elif tabs == "Analisis Pengiriman":
     st.header("Pengaruh Kecepatan Pengiriman terhadap Skor Ulasan")
     
-    average_review_scores = pd.read_csv("data\average_review_scores.csv")
+    average_review_scores = pd.read_csv("data/average_review_scores.csv")
     
     plot_bar_chart(average_review_scores, "Ontime", "review_score", 
                    "Pengaruh Kecepatan Pengiriman terhadap Skor Ulasan", "Kecepatan Pengiriman", "Skor Ulasan")
