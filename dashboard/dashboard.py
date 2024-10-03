@@ -3,8 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 import os
-st.write(os.getcwd())  # Menampilkan current working directory
-st.write(os.listdir('data'))  # Menampilkan daftar file di folder 'data'
 
 st.title("Analisis Data E-Commerce")
 
